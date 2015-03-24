@@ -48,10 +48,19 @@ window.UEDITOR_CONFIG = {
 
   //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的从新定义
   , toolbars: [
-    ["bold", "italic", "underline", "strikethrough", "forecolor", "backcolor", "justifyleft", "justifycenter", "justifyright", "justifyjustify", "indent", "removeformat", "formatmatch", "autotypeset", "pasteplain", "customstyle", "insertunorderedlist", "insertorderedlist", "source", "fullscreen", "preview", "help"],
-    ["insertimage", "emotion", "insertvideo", "attachment", "blockquote", "spechars", "link", "unlink"],
-    ["inserttable", "deletetable", "mergedown", "mergeright", "splittorows", "splittocols", "splittocells", "mergecells"],
-    []
+    // ["bold", "italic", "underline", "strikethrough", "forecolor", "backcolor", "justifyleft", "justifycenter", "justifyright", "justifyjustify", "indent", "removeformat", "formatmatch", "autotypeset", "pasteplain", "customstyle", "insertunorderedlist", "insertorderedlist", "source", "fullscreen", "preview", "help"],
+    // ["insertimage", "emotion", "insertvideo", "attachment", "blockquote", "spechars", "link", "unlink"],
+    // ["inserttable", "deletetable", "mergedown", "mergeright", "splittorows", "splittocols", "splittocells", "mergecells"],
+    [
+    'pasteplain', '|',
+      'bold', 'underline', 'strikethrough', 'superscript', 'subscript', '|',
+      'insertorderedlist', 'insertunorderedlist', 'cleardoc', '|',
+      'link', 'unlink', '|', 
+      'insertimage',
+      'horizontal', 
+      'spechars' ,'inserttable',"inserttable", "deletetable", "mergedown", "mergeright", "splittorows", "splittocols", "splittocells", "mergecells", '|',
+      'fontfamily', 'fontsize'
+    ]
   ]
   //当鼠标放在工具栏上时显示的tooltip提示,留空支持自动多语言配置，否则以配置值为准
   , labelMap: {
@@ -84,7 +93,7 @@ window.UEDITOR_CONFIG = {
   , initialContent: ''    //初始化编辑器的内容,也可以通过textarea/script给值，看官网例子
 
   //,initialFrameWidth:1000  //初始化编辑器宽度,默认1000
-  //,initialFrameHeight:320  //初始化编辑器高度,默认320
+  ,initialFrameHeight:100  //初始化编辑器高度,默认320
 
   //,autoClearinitialContent:true //是否自动清除编辑器初始内容，注意：如果focus属性设置为true,这个也为真，那么编辑器一上来就会触发导致初始化的内容看不到了
 
@@ -160,7 +169,7 @@ window.UEDITOR_CONFIG = {
 //            }
 //           ]
   //wordCount
-  //,wordCount:1          //是否开启字数统计
+  ,wordCount:0          //是否开启字数统计
   //,maximumWords:10000       //允许的最大字符数
   //字数统计提示，{#count}代表当前字数，{#leave}代表还可以输入多少字符数,留空支持多语言自动切换，否则按此配置显示
   //,wordCountMsg:''   //当前已输入 {#count} 个字符，您还可以输入{#leave} 个字符
@@ -169,7 +178,7 @@ window.UEDITOR_CONFIG = {
 
   //elementPathEnabled
   //是否启用元素路径，默认是显示
-  //,elementPathEnabled : true
+  ,elementPathEnabled : false
   //removeFormat
   //清除格式时可以删除的标签和属性
   //removeForamtTags标签
@@ -178,7 +187,7 @@ window.UEDITOR_CONFIG = {
   //,removeFormatAttributes:'class,style,lang,width,height,align,hspace,valign'
   //autoHeightEnabled
   // 是否自动长高,默认true
-  //,autoHeightEnabled:true
+  ,autoHeightEnabled:false
   //,minFrameWidth:800    //编辑器拖动时最小宽度,默认800
   //,minFrameHeight:220  //编辑器拖动时最小高度,默认220
   //autoFloatEnabled

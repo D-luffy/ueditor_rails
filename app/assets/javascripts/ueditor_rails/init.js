@@ -1,5 +1,9 @@
-//= require ueditor_rails/_config
-//= require ueditor/editor_all
+//= require ueditor_rails/_config.js
+//= require ueditor/ueditor.all.js
+//= require ueditor/lang/zh-cn/zh-cn.js
+//= require ueditor/kityformula-plugin/addKityFormulaDialog.js
+//= require ueditor/kityformula-plugin/getKfContent.js
+//= require ueditor/kityformula-plugin/defaultFilterFix.js
 //= require_self
 
 $(function() {
